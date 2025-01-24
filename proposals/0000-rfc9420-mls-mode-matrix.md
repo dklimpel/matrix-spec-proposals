@@ -151,14 +151,14 @@ private message. The object follows the following format (here illustrated as JS
 
 ```json
 {
-  "federation": {
-  "powers": ["example.net", "example.org"],
-  "servers": ["example.com", "example.net", "example.org"],
-  "can_propose": ["example.com", "example.net", "example.org"],
+   "federation": {
+      "powers": ["example.net", "example.org"],
+      "servers": ["example.com", "example.net", "example.org"],
+      "can_propose": ["example.com", "example.net", "example.org"],
   },
-  "security": {
-  "window": 0,
-  "required_verification": "m.cross"
+   "security": {
+      "window": 0,
+      "required_verification": "m.cross"
   }
 }
 ```
@@ -377,11 +377,11 @@ The encrypted payload should be:
 
 ```json
 {
-  "type": "m.room.encrypted",
-  "content": {
-    "algorithm": "m.megolm.v1.aes-sha2",
-    "ciphertext": "<encrypted_payload_base_64>"
-  }
+   "type": "m.room.encrypted",
+   "content": {
+      "algorithm": "m.megolm.v1.aes-sha2",
+      "ciphertext": "<encrypted_payload_base_64>"
+   }
 }
 ```
 
@@ -396,8 +396,8 @@ The plain text payload should be:
 
 ```json
 {
-  "type": "<event_type>",
-  "content": "<event_content>"
+   "type": "<event_type>",
+   "content": "<event_content>"
 }
 ```
 
@@ -424,15 +424,15 @@ This could for example look like this:
 
 ```json
 {
-  "m.room.name": {
-  "": { "name": "Dinner party" }
-  },
-  "m.room.topic": {
-  "": { "topic": "What will we have for dinner?" }
-  },
-  "net.example.custom.event" {
-  "somestatekey": { "cutom": "field"},
-  "someotherstatekey": { "cutom": "field2"}
+   "m.room.name": {
+      "": { "name": "Dinner party" }
+   },
+   "m.room.topic": {
+      "": { "topic": "What will we have for dinner?" }
+   },
+   "net.example.custom.event" {
+      "somestatekey": { "custom": "field"},
+      "someotherstatekey": { "custom": "field2"}
   }
 }
 ```
